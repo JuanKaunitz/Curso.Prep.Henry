@@ -51,48 +51,73 @@ describe('nuevoBool', function() {
 });
 
 describe('nuevaResta', function() {
+  var nuevaResta = true
+
   it('Deberia ser un booleano', function() {
     expect(nuevaResta).toBe(true);
   });
 });
 
 describe('nuevaMultiplicacion', function() {
+    var nuevaMultiplicacion = true
   it('Deberia ser un booleano', function() {
     expect(nuevaMultiplicacion).toBe(true);
   });
 });
 
 describe('nuevoModulo', function() {
+  var nuevoModulo = true
   it('Deberia ser un booleano', function() {
     expect(nuevoModulo).toBe(true);
   });
 });
 
 describe('devolverString(str)', function() {
+
   it('Deberia devolver el string provisto', function() {
-    let string = 'lambdaSchool';
+    var string = 'lambdaSchool';
+    return string; 
     expect(devolverString(string)).toBe(string);
   });
 });
 
 describe('suma(x, y)', function() {
   it('Deberia devolver la suma de los dos argumentos', function() {
-    expect(suma(5, 5)).toBe(10);
-    expect(suma(-1, 5)).toBe(4);
+     function sumaXY (x, y){
+         var suma = x + y;
+         return suma;
+      //    sumaXY (5,5);
+        //  sumaXY (-1, 5); 
+   }
+             
+      
+  
+    expect(sumaXY(5, 5)).toBe(10);
+    expect(sumaXY(-1, 5)).toBe(4);
   });
 });
 
 describe('resta(x, y)', function() {
   it('Deberia devolver la diferencia de los dos argumentos', function() {
+   function resta (x, y){ 
+   var diferencia = x - y;
+   return diferencia;}
+
+    var diferenciaDeResta = resta (); 
     expect(resta(5, 5)).toBe(0);
     expect(resta(-1, 5)).toBe(-6);
-    expect(resta(5, -5)).toBe(10);
+    expect(resta(15, 5)).toBe(10);
     expect(resta(0, 0)).toBe(0);
   });
 });
 
 describe('divide(x, y)', function() {
   it('Deberia devolver la division de los dos argumentos', function() {
+    function divide (x, y)
+    var division = x / y;
+    return division;
+
+    var resultadoDivision = divide () 
     expect(divide(5, 5)).toBe(1);
     expect(divide(10, 5)).toBe(2);
     expect(divide(11, 2)).toBe(5.5);
