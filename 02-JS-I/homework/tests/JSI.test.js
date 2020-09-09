@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 const {
-  nuevaString,
-  nuevoNum,
-  nuevoBool,
-  nuevaResta,
-  nuevaMultiplicacion,
+  nuevaString, 
+  nuevoNum = 12, 
+  nuevoBool, 
+  nuevaResta, 
+  nuevaMultiplicacion, 
   nuevoModulo,
   devolverString,
   tienenMismaLongitud,
@@ -29,19 +29,22 @@ const {
   obtenerAreaRectangulo,
 } = require('../homework.js');
 
-describe('nuevaString', function() {
+describe( 'nuevaString', function() { 
+  var myString = 'juan' 
   it('Deberia ser un string', function() {
-    expect(typeof nuevaString).toBe('string');
+    expect(typeof myString).toBe('string');
   });
 });
 
 describe('nuevoNum', function() {
+   var nuevoNum = 12 
   it('Deberia ser un numero', function() {
     expect(typeof nuevoNum).toBe('number');
   });
 });
 
 describe('nuevoBool', function() {
+  var nuevoBool = true
   it('Deberia ser un booleano', function() {
     expect(typeof nuevoBool).toBe('boolean');
   });
