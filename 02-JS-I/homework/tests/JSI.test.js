@@ -113,9 +113,11 @@ describe('resta(x, y)', function() {
 
 describe('divide(x, y)', function() {
   it('Deberia devolver la division de los dos argumentos', function() {
-    function divide (x, y)
-    var division = x / y;
-    return division;
+    function divide (x, y) {
+      var div = x / y;
+      return div;
+    }
+    
 
     var resultadoDivision = divide () 
     expect(divide(5, 5)).toBe(1);
@@ -126,6 +128,12 @@ describe('divide(x, y)', function() {
 
 describe('multiplica(x, y)', function() {
   it('Deberia devolver el producto de los dos argumentos', function() {
+      function multiplica (x, y) {
+       var producto = x * y;
+       return producto;
+
+      }
+     var resultadoMultiplicacion = multiplica () 
     expect(multiplica(5, 5)).toBe(25);
     expect(multiplica(10, -5)).toBe(-50);
     expect(multiplica(11, 0)).toBe(0);
@@ -135,6 +143,14 @@ describe('multiplica(x, y)', function() {
 
 describe('sonIguales(x, y)', function() {
   it('Deberia devolver true si los argumentos son iguales y sino false', function() {
+
+      function sonIguales (x, y) {
+        if (x === y) { 
+          return true;}
+          return false;
+      }
+
+        var igualdad = sonIguales ()
     expect(sonIguales(15, 15)).toBe(true);
     expect(sonIguales(90, 50)).toBe(false);
     expect(sonIguales('test', 'test')).toBe(true);
@@ -143,6 +159,14 @@ describe('sonIguales(x, y)', function() {
 
 describe('tienenMismaLongitud(str1, str2)', function() {
   it('Deberia devolver true si los strings tienen la misma longitud y sino false', function() {
+
+    function tienenMismaLongitud (str1, str2) {
+       if (str1.length  === str2.length ) { 
+          return true;}
+          return false;
+    }
+
+    var mismaLong = tienenMismaLongitud()
     expect(tienenMismaLongitud('hi', 'there')).toBe(false);
     expect(tienenMismaLongitud('javascript', 'bumfuzzled')).toBe(true);
   });
@@ -150,6 +174,15 @@ describe('tienenMismaLongitud(str1, str2)', function() {
 
 describe('menosQueNoventa(num)', function() {
   it('Deberia devolver true si el numero es menor a noventa sino false', function() {
+
+    function menosQueNoventa (num,) {
+      
+     if (num < 90 ) {
+          return true; }
+          return false; 
+    }
+
+    var num = menosQueNoventa ()
     expect(menosQueNoventa(15)).toBe(true);
     expect(menosQueNoventa(90)).toBe(false);
     expect(menosQueNoventa(100)).toBe(false);
@@ -158,6 +191,14 @@ describe('menosQueNoventa(num)', function() {
 
 describe('mayorQueCincuenta(num)', function() {
   it('Deberia devolver true si el numero es mayor a cincuenta sino false', function() {
+    function mayorQueCincuenta (num) {
+        if (num > 50) {
+          return true
+        }
+          return false;
+
+    }
+    var seraMayor = mayorQueCincuenta () 
     expect(mayorQueCincuenta(15)).toBe(false);
     expect(mayorQueCincuenta(50)).toBe(false);
     expect(mayorQueCincuenta(60)).toBe(true);
@@ -166,6 +207,13 @@ describe('mayorQueCincuenta(num)', function() {
 
 describe('obtenerResto(x, y)', function() {
   it('Deberia devolver el resto de dividir x sobre y', function() {
+
+    function obtenerResto (x, y) {
+      var resto = x % y;
+      return resto;
+    }
+
+    var cuantoQueda = obtenerResto () 
     expect(obtenerResto(15, 5)).toBe(0);
     expect(obtenerResto(21, 5)).toBe(1);
     expect(obtenerResto(22, 5)).toBe(2);
@@ -174,6 +222,13 @@ describe('obtenerResto(x, y)', function() {
 
 describe('esPar(num)', function() {
   it('Deberia devolver true si el numero es par sino false', function() {
+
+    function esPar (num) {
+      if (num % 2 === 0){ 
+        return true;}
+        return false; 
+    }
+    var par = esPar ()
     expect(esPar(6)).toBe(true);
     expect(esPar(7)).toBe(false);
     expect(esPar(0)).toBe(true);
@@ -182,6 +237,14 @@ describe('esPar(num)', function() {
 
 describe('esImpar(num)', function() {
   it('Deberia devolver true si el numero es impar sino false', function() {
+      function esImpar (num){
+        if (num % 2 != 0){
+          return true;
+        }
+        return false;
+      }
+      var impar = esImpar ()
+
     expect(esImpar(6)).toBe(false);
     expect(esImpar(7)).toBe(true);
     expect(esImpar(0)).toBe(false);
