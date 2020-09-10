@@ -161,6 +161,8 @@ describe('tienenMismaLongitud(str1, str2)', function() {
   it('Deberia devolver true si los strings tienen la misma longitud y sino false', function() {
 
     function tienenMismaLongitud (str1, str2) {
+      var str1 = str1.length;
+      var str2 = str2.length;
        if (str1.length  === str2.length ) { 
           return true;}
           return false;
@@ -253,6 +255,12 @@ describe('esImpar(num)', function() {
 
 describe('elevarAlCuadrado(num)', function() {
   it('Deberia devolver el numero elevado al cuadrado', function() {
+    function elevarAlCuadrado (num){
+      var resulPotencia = Math.pow(num, 2)
+      return resulPotencia;
+    }
+    var potencia = elevarAlCuadrado ();
+    
     expect(elevarAlCuadrado(6)).toBe(36);
     expect(elevarAlCuadrado(7)).toBe(49);
     expect(elevarAlCuadrado(0)).toBe(0);
@@ -262,6 +270,11 @@ describe('elevarAlCuadrado(num)', function() {
 
 describe('elevarAlCubo(num)', function() {
   it('Deberia devolver el numero elevado al cubo', function() {
+    function elevarAlCubo (num){
+      var resPot = Math.pow (num, 3)
+      return resPot;
+    }
+    var potencia = elevarAlCubo ();
     expect(elevarAlCubo(3)).toBe(27);
     expect(elevarAlCubo(0)).toBe(0);
     expect(elevarAlCubo(-5)).toBe(-125);
@@ -270,6 +283,11 @@ describe('elevarAlCubo(num)', function() {
 
 describe('elevar(num, exponent)', function() {
   it('Deberia devolver el numero elevado al exponente indicado', function() {
+    function elevar (num, exponent){
+      var result = Math.pow (num, exponent)
+      return result
+    }
+    var resPot = elevar (); 
     expect(elevar(2, 2)).toBe(4);
     expect(elevar(2, 3)).toBe(8);
     expect(elevar(0, 5)).toBe(0);
@@ -279,6 +297,12 @@ describe('elevar(num, exponent)', function() {
 
 describe('redondearNumero(num)', function() {
   it('Deberia devolver el numero redondeado', function() {
+    function redondearNumero (num){
+      var numRedondeado = Math.round (num)
+      return numRedondeado;
+    }
+    var numeroFinal = redondearNumero ();
+
     expect(redondearNumero(1.5)).toBe(2);
     expect(redondearNumero(2)).toBe(2);
     expect(redondearNumero(0.1)).toBe(0);
@@ -287,6 +311,12 @@ describe('redondearNumero(num)', function() {
 
 describe('redondearHaciaArriba(num)', function() {
   it('Deberia devolver el numero redondeado para arriba', function() {
+
+    function redondearHaciaArriba (num){
+      var redon = Math.ceil (num)
+      return redon
+    }
+    var redonArriba = redondearHaciaArriba ();
     expect(redondearHaciaArriba(1.5)).toBe(2);
     expect(redondearHaciaArriba(2)).toBe(2);
     expect(redondearHaciaArriba(0.1)).toBe(1);
@@ -295,6 +325,12 @@ describe('redondearHaciaArriba(num)', function() {
 
 describe('agregarSimboloExclamacion(str)', function() {
   it('Deberia agregar un signo de exclamacion al final del string', function() {
+    function agregarSimboloExclamacion (str) { 
+      var a= '!'
+      var agregaExclamacion = str + a
+      return agregaExclamacion;
+    }
+    var agrega = agregarSimboloExclamacion ()
     expect(agregarSimboloExclamacion('hello world')).toBe('hello world!');
     expect(agregarSimboloExclamacion('Soy Henry')).toBe('Soy Henry!');
   });
@@ -302,6 +338,13 @@ describe('agregarSimboloExclamacion(str)', function() {
 
 describe('combinarNombres(firstName, lastName)', function() {
   it('Deberia devolver los strings combinados con un espacio en el medio', function() {
+    function combinarNombres (firstName, lastName){
+      var combinar = firstName + ' ' + lastName
+      return combinar;
+
+    }
+
+    var combinaNom = combinarNombres();
     expect(combinarNombres('hello', 'world')).toBe('hello world');
     expect(combinarNombres('Soy', 'Henry')).toBe('Soy Henry');
   });
@@ -309,6 +352,12 @@ describe('combinarNombres(firstName, lastName)', function() {
 
 describe('obtenerSaludo(name)', function() {
   it('Deberia devolver el string \'Hola {name}!\'', function() {
+
+    function obtenerSaludo (name){
+      var saludoCompleto = 'Hola'+ ' '+name +'!'
+      return saludoCompleto;
+    }
+    var saludo = obtenerSaludo ();
     expect(obtenerSaludo('Martin')).toBe('Hola Martin!');
     expect(obtenerSaludo('Antonio')).toBe('Hola Antonio!');
   });
@@ -316,6 +365,11 @@ describe('obtenerSaludo(name)', function() {
 
 describe('obtenerAreaRectangulo(alto, ancho)', function() {
   it('Deberia retornar el area correcta del rectangulo', function() {
+    function obtenerAreaRectangulo (alto, ancho){
+      var areaRectangulo = alto * ancho;
+      return areaRectangulo;
+    }
+    var area= obtenerAreaRectangulo();
     expect(obtenerAreaRectangulo(2, 2)).toBe(4);
     expect(obtenerAreaRectangulo(3, 6)).toBe(18);
     expect(obtenerAreaRectangulo(0, 2)).toBe(0);
