@@ -159,19 +159,25 @@ describe('sonIguales(x, y)', function() {
 
 describe('tienenMismaLongitud(str1, str2)', function() {
   it('Deberia devolver true si los strings tienen la misma longitud y sino false', function() {
-
+//var nombreGato = 'felix';
+//console.log(nombreGato.length); // 5
     function tienenMismaLongitud (str1, str2) {
-      var str1 = str1.length;
-      var str2 = str2.length;
-       if (str1.length  === str2.length ) { 
-          return true;}
-          return false;
+     if (str1.length === str2.length ){ 
+        return true;
+     }
+      
+      else {return false;
+      }
+      
+
     }
 
-    var mismaLong = tienenMismaLongitud()
+     tienenMismaLongitud('hi', 'there');
+     tienenMismaLongitud ('javascript', 'bumfuzzled');
+     { 
     expect(tienenMismaLongitud('hi', 'there')).toBe(false);
     expect(tienenMismaLongitud('javascript', 'bumfuzzled')).toBe(true);
-  });
+  };
 });
 
 describe('menosQueNoventa(num)', function() {
